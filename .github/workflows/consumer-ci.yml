@@ -63,3 +63,14 @@ jobs:
           GIT_COMMIT: ${{ github.sha }}
           GIT_BRANCH: ${{ github.ref_name }}
         run: npm run publish:pact:async
+
+      - name: Record deployments in production
+        if: github.event_name != 'pull_request'
+        env:
+          PACT_BROKER_BASE_URL: ${{ secrets.PACT_BROKER_BASE_URL }}
+          PACT_BROKER_USERNAME: ${{ secrets.PACT_BROKER_USERNAME }}
+          PACT_BROKER_PASSWORD: ${{ secrets.PACT_BROKER_PASSWORD }}
+        run: |
+          npx pact broker record-deployment --pacticipant OrdersConsumer --version "${PACT_VERSION_V1:-1.0.0}" --environment production --broker-base-url "$PACT_BROKER_BASE_URL"
+          npx pact broker record-deployment --pacticipant OrdersConsumer --version "${PACT_VERSION_V2:-2.0.0}" --environment production --broker-base-url "$PACT_BROKER_BASE_URL"
+          npx pact broker record-deployment --pacticipant ShippingService --version "${{ github.sha }}" --environment production --broker-base-url "$PACT_BROKER_BASE_URL"
