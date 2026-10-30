@@ -1,0 +1,305 @@
+Verify provider against v1 and v2 pacts	Set up job	﻿2026-10-30T14:58:48.5949310Z Current runner version: '2.338.2'
+Verify provider against v1 and v2 pacts	Set up job	2026-10-30T14:58:48.5971911Z ##[group]Runner Image Provisioner
+Verify provider against v1 and v2 pacts	Set up job	2026-10-30T14:58:48.5972744Z Hosted Compute Agent
+Verify provider against v1 and v2 pacts	Set up job	2026-10-30T14:58:48.5973385Z Version: 20261021.618
+Verify provider against v1 and v2 pacts	Set up job	2026-10-30T14:58:48.5973983Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+Verify provider against v1 and v2 pacts	Set up job	2026-10-30T14:58:48.5974632Z Build Date: 2026-10-21T00:45:21Z
+Verify provider against v1 and v2 pacts	Set up job	2026-10-30T14:58:48.5975305Z Worker ID: {f8564523-d76d-411a-9693-e911a74404e6}
+Verify provider against v1 and v2 pacts	Set up job	2026-10-30T14:58:48.5976029Z Region: westus3
+Verify provider against v1 and v2 pacts	Set up job	2026-10-30T14:58:48.5976583Z Cloud: Azure
+Verify provider against v1 and v2 pacts	Set up job	2026-10-30T14:58:48.5977093Z ##[endgroup]
+Verify provider against v1 and v2 pacts	Set up job	2026-10-30T14:58:48.5978779Z ##[group]Operating System
+Verify provider against v1 and v2 pacts	Set up job	2026-10-30T14:58:48.5979597Z Ubuntu
+Verify provider against v1 and v2 pacts	Set up job	2026-10-30T14:58:48.5980145Z 24.04.5
+Verify provider against v1 and v2 pacts	Set up job	2026-10-30T14:58:48.5980858Z LTS
+Verify provider against v1 and v2 pacts	Set up job	2026-10-30T14:58:48.5981504Z ##[endgroup]
+Verify provider against v1 and v2 pacts	Set up job	2026-10-30T14:58:48.5982189Z ##[group]Runner Image
+Verify provider against v1 and v2 pacts	Set up job	2026-10-30T14:58:48.5982900Z Image: ubuntu-24.04
+Verify provider against v1 and v2 pacts	Set up job	2026-10-30T14:58:48.5984176Z Version: 20261025.353.1
+Verify provider against v1 and v2 pacts	Set up job	2026-10-30T14:58:48.5985275Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261025.353/images/ubuntu/Ubuntu2404-Readme.md
+Verify provider against v1 and v2 pacts	Set up job	2026-10-30T14:58:48.5987017Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261025.353
+Verify provider against v1 and v2 pacts	Set up job	2026-10-30T14:58:48.5988154Z ##[endgroup]
+Verify provider against v1 and v2 pacts	Set up job	2026-10-30T14:58:48.5989313Z ##[group]GITHUB_TOKEN Permissions
+Verify provider against v1 and v2 pacts	Set up job	2026-10-30T14:58:48.5991626Z Contents: read
+Verify provider against v1 and v2 pacts	Set up job	2026-10-30T14:58:48.5992239Z Metadata: read
+Verify provider against v1 and v2 pacts	Set up job	2026-10-30T14:58:48.5992765Z Packages: read
+Verify provider against v1 and v2 pacts	Set up job	2026-10-30T14:58:48.5993325Z ##[endgroup]
+Verify provider against v1 and v2 pacts	Set up job	2026-10-30T14:58:48.5995245Z Secret source: Actions
+Verify provider against v1 and v2 pacts	Set up job	2026-10-30T14:58:48.5996120Z Cache mode: write
+Verify provider against v1 and v2 pacts	Set up job	2026-10-30T14:58:48.5996789Z Prepare workflow directory
+Verify provider against v1 and v2 pacts	Set up job	2026-10-30T14:58:48.6343632Z Prepare all required actions
+Verify provider against v1 and v2 pacts	Set up job	2026-10-30T14:58:48.6389497Z Getting action download info
+Verify provider against v1 and v2 pacts	Set up job	2026-10-30T14:58:48.9718590Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+Verify provider against v1 and v2 pacts	Set up job	2026-10-30T14:58:49.0868934Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+Verify provider against v1 and v2 pacts	Set up job	2026-10-30T14:58:49.2725033Z Complete job name: Verify provider against v1 and v2 pacts
+Verify provider against v1 and v2 pacts	Checkout	﻿2026-10-30T14:58:49.3436182Z ##[group]Run actions/checkout@v4
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.3437038Z with:
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.3437929Z   repository: mestihudson/coursera-pact-module-3
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.3441545Z   token: ***
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.3442069Z   ssh-strict: true
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.3442591Z   ssh-user: git
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.3443141Z   persist-credentials: true
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.3443695Z   clean: true
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.3444200Z   sparse-checkout-cone-mode: true
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.3444809Z   fetch-depth: 1
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.3445313Z   fetch-tags: false
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.3445811Z   show-progress: true
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.3446350Z   lfs: false
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.3446783Z   submodules: false
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.3447817Z   set-safe-directory: true
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.3448402Z   allow-unsafe-pr-checkout: false
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.3449241Z ##[endgroup]
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.6249392Z Syncing repository: mestihudson/coursera-pact-module-3
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.6251377Z ##[group]Getting Git version info
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.6252273Z Working directory is '/home/runner/work/coursera-pact-module-3/coursera-pact-module-3'
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.6253628Z [command]/usr/bin/git version
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.6322503Z git version 2.56.0
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.6341139Z ##[endgroup]
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.6369324Z Temporarily overriding HOME='/home/runner/work/_temp/c32bfc8c-4fd5-47a2-8570-3637246faa2a' before making global git config changes
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.6389690Z Adding repository directory to the temporary git global config as a safe directory
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.6391657Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/coursera-pact-module-3/coursera-pact-module-3
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.6418097Z Deleting the contents of '/home/runner/work/coursera-pact-module-3/coursera-pact-module-3'
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.6422783Z ##[group]Initializing the repository
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.6427810Z [command]/usr/bin/git init /home/runner/work/coursera-pact-module-3/coursera-pact-module-3
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.6557002Z hint: Using 'master' as the name for the initial branch. This default branch name
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.6558913Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.6560436Z hint: to use in all of your new repositories, which will suppress this warning,
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.6561734Z hint: call:
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.6562485Z hint:
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.6563584Z hint: 	git config --global init.defaultBranch <name>
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.6564593Z hint:
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.6565545Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.6566969Z hint: 'development'. The just-created branch can be renamed via this command:
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.6568389Z hint:
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.6569146Z hint: 	git branch -m <name>
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.6569932Z hint:
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.6571037Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.6572887Z Initialized empty Git repository in /home/runner/work/coursera-pact-module-3/coursera-pact-module-3/.git/
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.6585034Z [command]/usr/bin/git remote add origin https://github.com/mestihudson/coursera-pact-module-3
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.6635360Z ##[endgroup]
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.6636942Z ##[group]Disabling automatic garbage collection
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.6640079Z [command]/usr/bin/git config --local gc.auto 0
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.6672510Z ##[endgroup]
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.6673797Z ##[group]Setting up auth
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.6680519Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.6719295Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.7134205Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.7164009Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.7335298Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.7366742Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.7542054Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.7576078Z ##[endgroup]
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.7587294Z ##[group]Fetching the repository
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:49.7589212Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +770856b2f1fd63c34a93744597e61444e82444cc:refs/remotes/origin/main
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:50.4405747Z From https://github.com/mestihudson/coursera-pact-module-3
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:50.4407915Z  * [new ref]         770856b2f1fd63c34a93744597e61444e82444cc -> origin/main
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:50.4412191Z ##[endgroup]
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:50.4413935Z ##[group]Determining the checkout info
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:50.4416219Z ##[endgroup]
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:50.4418126Z [command]/usr/bin/git sparse-checkout disable
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:50.4469175Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:50.4508665Z ##[group]Checking out the ref
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:50.4511032Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:50.4629770Z Switched to a new branch 'main'
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:50.4633630Z branch 'main' set up to track 'origin/main'.
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:50.4643722Z ##[endgroup]
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:50.4677070Z [command]/usr/bin/git log -1 --format=%H
+Verify provider against v1 and v2 pacts	Checkout	2026-10-30T14:58:50.4698905Z 770856b2f1fd63c34a93744597e61444e82444cc
+Verify provider against v1 and v2 pacts	Setup Node.js	﻿2026-10-30T14:58:50.5035502Z ##[group]Run actions/setup-node@v4
+Verify provider against v1 and v2 pacts	Setup Node.js	2026-10-30T14:58:50.5036754Z with:
+Verify provider against v1 and v2 pacts	Setup Node.js	2026-10-30T14:58:50.5037970Z   node-version: 22
+Verify provider against v1 and v2 pacts	Setup Node.js	2026-10-30T14:58:50.5039101Z   cache: npm
+Verify provider against v1 and v2 pacts	Setup Node.js	2026-10-30T14:58:50.5040182Z   cache-dependency-path: provider/package-lock.json
+Verify provider against v1 and v2 pacts	Setup Node.js	2026-10-30T14:58:50.5041492Z   always-auth: false
+Verify provider against v1 and v2 pacts	Setup Node.js	2026-10-30T14:58:50.5042397Z   check-latest: false
+Verify provider against v1 and v2 pacts	Setup Node.js	2026-10-30T14:58:50.5050352Z   token: ***
+Verify provider against v1 and v2 pacts	Setup Node.js	2026-10-30T14:58:50.5051203Z ##[endgroup]
+Verify provider against v1 and v2 pacts	Setup Node.js	2026-10-30T14:58:50.6392493Z Found in cache @ /opt/hostedtoolcache/node/22.23.4/x64
+Verify provider against v1 and v2 pacts	Setup Node.js	2026-10-30T14:58:50.6398122Z (node:2066) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+Verify provider against v1 and v2 pacts	Setup Node.js	2026-10-30T14:58:50.6401287Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Verify provider against v1 and v2 pacts	Setup Node.js	2026-10-30T14:58:50.6403806Z ##[group]Environment details
+Verify provider against v1 and v2 pacts	Setup Node.js	2026-10-30T14:58:54.7825434Z node: v22.23.4
+Verify provider against v1 and v2 pacts	Setup Node.js	2026-10-30T14:58:54.7826645Z npm: 10.9.9
+Verify provider against v1 and v2 pacts	Setup Node.js	2026-10-30T14:58:54.7827011Z yarn: 1.22.22
+Verify provider against v1 and v2 pacts	Setup Node.js	2026-10-30T14:58:54.7828302Z ##[endgroup]
+Verify provider against v1 and v2 pacts	Setup Node.js	2026-10-30T14:58:54.7846893Z [command]/opt/hostedtoolcache/node/22.23.4/x64/bin/npm config get cache
+Verify provider against v1 and v2 pacts	Setup Node.js	2026-10-30T14:58:55.0719403Z /home/runner/.npm
+Verify provider against v1 and v2 pacts	Setup Node.js	2026-10-30T14:58:55.3165556Z Cache hit for: node-cache-Linux-x64-npm-a30192a492ea4dee4e12d9bc8133a0fca7ae02f4aa88842128789fa6f90503fe
+Verify provider against v1 and v2 pacts	Setup Node.js	2026-10-30T14:58:55.3298995Z (node:2066) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+Verify provider against v1 and v2 pacts	Setup Node.js	2026-10-30T14:58:56.5379366Z Received 40077453 of 40077453 (100.0%), 39.4 MBs/sec
+Verify provider against v1 and v2 pacts	Setup Node.js	2026-10-30T14:58:56.5380214Z Cache Size: ~38 MB (40077453 B)
+Verify provider against v1 and v2 pacts	Setup Node.js	2026-10-30T14:58:56.5406257Z [command]/usr/bin/tar -xf /home/runner/work/_temp/3a2623fd-8479-4c34-9cfb-38cfb439f3eb/cache.tzst -P -C /home/runner/work/coursera-pact-module-3/coursera-pact-module-3 --use-compress-program unzstd
+Verify provider against v1 and v2 pacts	Setup Node.js	2026-10-30T14:58:56.6191743Z Cache restored successfully
+Verify provider against v1 and v2 pacts	Setup Node.js	2026-10-30T14:58:56.6209730Z Cache restored from key: node-cache-Linux-x64-npm-a30192a492ea4dee4e12d9bc8133a0fca7ae02f4aa88842128789fa6f90503fe
+Verify provider against v1 and v2 pacts	Install dependencies	﻿2026-10-30T14:58:56.6365298Z ##[group]Run npm ci
+Verify provider against v1 and v2 pacts	Install dependencies	2026-10-30T14:58:56.6365790Z ^[[36;1mnpm ci^[[0m
+Verify provider against v1 and v2 pacts	Install dependencies	2026-10-30T14:58:56.6391681Z shell: /usr/bin/bash -e {0}
+Verify provider against v1 and v2 pacts	Install dependencies	2026-10-30T14:58:56.6392193Z ##[endgroup]
+Verify provider against v1 and v2 pacts	Install dependencies	2026-10-30T14:59:00.4231080Z npm warn deprecated glob@10.5.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+Verify provider against v1 and v2 pacts	Install dependencies	2026-10-30T14:59:02.0697704Z 
+Verify provider against v1 and v2 pacts	Install dependencies	2026-10-30T14:59:02.0698788Z added 438 packages, and audited 439 packages in 5s
+Verify provider against v1 and v2 pacts	Install dependencies	2026-10-30T14:59:02.0699540Z 
+Verify provider against v1 and v2 pacts	Install dependencies	2026-10-30T14:59:02.0699827Z 89 packages are looking for funding
+Verify provider against v1 and v2 pacts	Install dependencies	2026-10-30T14:59:02.0700414Z   run `npm fund` for details
+Verify provider against v1 and v2 pacts	Install dependencies	2026-10-30T14:59:02.0811718Z 
+Verify provider against v1 and v2 pacts	Install dependencies	2026-10-30T14:59:02.0812739Z 5 low severity vulnerabilities
+Verify provider against v1 and v2 pacts	Install dependencies	2026-10-30T14:59:02.0813460Z 
+Verify provider against v1 and v2 pacts	Install dependencies	2026-10-30T14:59:02.0814073Z To address issues that do not require attention, run:
+Verify provider against v1 and v2 pacts	Install dependencies	2026-10-30T14:59:02.0815167Z   npm audit fix
+Verify provider against v1 and v2 pacts	Install dependencies	2026-10-30T14:59:02.0815652Z 
+Verify provider against v1 and v2 pacts	Install dependencies	2026-10-30T14:59:02.0816379Z To address all issues (including breaking changes), run:
+Verify provider against v1 and v2 pacts	Install dependencies	2026-10-30T14:59:02.0817296Z   npm audit fix --force
+Verify provider against v1 and v2 pacts	Install dependencies	2026-10-30T14:59:02.0818016Z 
+Verify provider against v1 and v2 pacts	Install dependencies	2026-10-30T14:59:02.0818430Z Run `npm audit` for details.
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	﻿2026-10-30T14:59:02.1424913Z ##[group]Run npx jest --runInBand test/orders.broker.verify.test.js
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:02.1425555Z ^[[36;1mnpx jest --runInBand test/orders.broker.verify.test.js^[[0m
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:02.1440498Z shell: /usr/bin/bash -e {0}
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:02.1440909Z env:
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:02.1441261Z   CI: true
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:02.1441926Z   PACT_BROKER_BASE_URL: ***
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:02.1442336Z   PACT_BROKER_USERNAME: ***
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:02.1442701Z   PACT_BROKER_PASSWORD: ***
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:02.1443183Z   GIT_COMMIT: 770856b2f1fd63c34a93744597e61444e82444cc
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:02.1443588Z   GIT_BRANCH: main
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:02.1443945Z ##[endgroup]
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:05.7021380Z   console.log
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:05.7022773Z     [14:59:05.683] ^[[33mWARN^[[39m (2189): ^[[36mpact@17.1.4: no state handler found for state: "order 1001 exists"^[[39m
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:05.7023826Z 
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:05.7024237Z       at Object.write (node_modules/@pact-foundation/pact-core/src/logger/pino.ts:17:17)
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:05.7024756Z 
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:05.7077166Z (node:2189) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:05.7078234Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.1667845Z   console.log
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.1669411Z     [14:59:06.164] ^[[33mWARN^[[39m (2189): ^[[36mpact@17.1.4: no state handler found for state: "order 1001 exists"^[[39m
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.1669929Z 
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.1670296Z       at Object.write (node_modules/@pact-foundation/pact-core/src/logger/pino.ts:17:17)
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.1670727Z 
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.6640802Z 2026-10-30T14:59:06.663808Z  WARN ThreadId(06) pact_matching::metrics: 
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.6641288Z 
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.6641427Z Please note:
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.6642576Z We are tracking events anonymously to gather important usage statistics like Pact version and operating system. To disable tracking, set the 'PACT_DO_NOT_TRACK' environment variable to 'true'.
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.6643341Z 
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.6643352Z 
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.7567023Z The pact at ***/pacts/provider/OrdersProvider/consumer/OrdersConsumer/pact-version/5d76705016f74f1b44ddf5f2ee8d39334d01366a is being verified because the pact content belongs to the consumer version matching the following criterion:
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.7568597Z     * all consumer versions tagged 'v1' (1.0.0)
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.7569078Z 
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.7569981Z Verifying a pact between ^[[1mOrdersConsumer^[[0m and ^[[1mOrdersProvider^[[0m
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.7570543Z 
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.7570958Z   a request for order 1001 (2s 541ms loading, 48ms verification)
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.7571648Z      Given order 1001 exists
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.7572269Z     returns a response which
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.7572868Z       has status code ^[[1m200^[[0m (^[[32mOK^[[0m)
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.7573538Z       includes headers
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.7574352Z         "^[[1mContent-Type^[[0m" with value "^[[1mapplication/json^[[0m" (^[[32mOK^[[0m)
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.7575733Z       has a matching body (^[[32mOK^[[0m)
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.7576117Z 
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.7578409Z The pact at ***/pacts/provider/OrdersProvider/consumer/OrdersConsumer/pact-version/99d09d5ba00671e91341d350336b2e0c4589c3d2 is being verified because the pact content belongs to the consumer version matching the following criterion:
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.7580023Z     * all consumer versions tagged 'v2' (2.0.0)
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.7580427Z 
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.7581014Z Verifying a pact between ^[[1mOrdersConsumer^[[0m and ^[[1mOrdersProvider^[[0m
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.7581715Z 
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.7582175Z   a request for order 1001 on API v2 (2s 541ms loading, 14ms verification)
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.7582789Z      Given order 1001 exists
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.7583266Z     returns a response which
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.7583921Z       has status code ^[[1m200^[[0m (^[[32mOK^[[0m)
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.7584524Z       includes headers
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.7585293Z         "^[[1mContent-Type^[[0m" with value "^[[1mapplication/json^[[0m" (^[[32mOK^[[0m)
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.7586531Z       has a matching body (^[[32mOK^[[0m)
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.7586832Z 
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.7586841Z 
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.7663031Z PASS test/orders.broker.verify.test.js
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.7663852Z   Orders API - provider verification against the Broker
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.7666057Z     ✓ satisfies the v1 and v2 contracts published on the Broker (3651 ms)
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.7666566Z 
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.7687751Z Test Suites: 1 passed, 1 total
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.7688441Z Tests:       1 passed, 1 total
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.7689140Z Snapshots:   0 total
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.7689619Z Time:        4.233 s
+Verify provider against v1 and v2 pacts	Verify provider against the v1 and v2 contracts	2026-10-30T14:59:06.7690252Z Ran all test suites matching test/orders.broker.verify.test.js.
+Verify provider against v1 and v2 pacts	Verify provider against the async contract	﻿2026-10-30T14:59:06.8903683Z ##[group]Run npx jest --runInBand test/order-shipped.broker.verify.test.js
+Verify provider against v1 and v2 pacts	Verify provider against the async contract	2026-10-30T14:59:06.8904422Z ^[[36;1mnpx jest --runInBand test/order-shipped.broker.verify.test.js^[[0m
+Verify provider against v1 and v2 pacts	Verify provider against the async contract	2026-10-30T14:59:06.8917489Z shell: /usr/bin/bash -e {0}
+Verify provider against v1 and v2 pacts	Verify provider against the async contract	2026-10-30T14:59:06.8917897Z env:
+Verify provider against v1 and v2 pacts	Verify provider against the async contract	2026-10-30T14:59:06.8918184Z   CI: true
+Verify provider against v1 and v2 pacts	Verify provider against the async contract	2026-10-30T14:59:06.8918765Z   PACT_BROKER_BASE_URL: ***
+Verify provider against v1 and v2 pacts	Verify provider against the async contract	2026-10-30T14:59:06.8919100Z   PACT_BROKER_USERNAME: ***
+Verify provider against v1 and v2 pacts	Verify provider against the async contract	2026-10-30T14:59:06.8919457Z   PACT_BROKER_PASSWORD: ***
+Verify provider against v1 and v2 pacts	Verify provider against the async contract	2026-10-30T14:59:06.8919846Z   GIT_COMMIT: 770856b2f1fd63c34a93744597e61444e82444cc
+Verify provider against v1 and v2 pacts	Verify provider against the async contract	2026-10-30T14:59:06.8920234Z ##[endgroup]
+Verify provider against v1 and v2 pacts	Verify provider against the async contract	2026-10-30T14:59:09.5109254Z 2026-10-30T14:59:09.510630Z  WARN ThreadId(06) pact_verifier::callback_executors: State Change ignored as there is no state change URL provided for interaction 9c299d9f739bf72e9e79de8d962f13d2cfdbd335
+Verify provider against v1 and v2 pacts	Verify provider against the async contract	2026-10-30T14:59:10.0080868Z 2026-10-30T14:59:10.007818Z  WARN ThreadId(06) pact_matching::metrics: 
+Verify provider against v1 and v2 pacts	Verify provider against the async contract	2026-10-30T14:59:10.0081509Z 
+Verify provider against v1 and v2 pacts	Verify provider against the async contract	2026-10-30T14:59:10.0081802Z Please note:
+Verify provider against v1 and v2 pacts	Verify provider against the async contract	2026-10-30T14:59:10.0083375Z We are tracking events anonymously to gather important usage statistics like Pact version and operating system. To disable tracking, set the 'PACT_DO_NOT_TRACK' environment variable to 'true'.
+Verify provider against v1 and v2 pacts	Verify provider against the async contract	2026-10-30T14:59:10.0084108Z 
+Verify provider against v1 and v2 pacts	Verify provider against the async contract	2026-10-30T14:59:10.0084115Z 
+Verify provider against v1 and v2 pacts	Verify provider against the async contract	2026-10-30T14:59:10.0592868Z The pact at ***/pacts/provider/OrdersProvider/consumer/ShippingService/pact-version/0312f14a71cd02880413d0cc2cb05612969c8bb1 is being verified because the pact content belongs to the consumer versions matching the following criteria:
+Verify provider against v1 and v2 pacts	Verify provider against the async contract	2026-10-30T14:59:10.0594231Z     * all consumer versions tagged 'async' (1.0.0)
+Verify provider against v1 and v2 pacts	Verify provider against the async contract	2026-10-30T14:59:10.0594871Z     * all consumer versions tagged 'async' (770856b2f1fd63c34a93744597e61444e82444cc)
+Verify provider against v1 and v2 pacts	Verify provider against the async contract	2026-10-30T14:59:10.0595221Z 
+Verify provider against v1 and v2 pacts	Verify provider against the async contract	2026-10-30T14:59:10.0595794Z Verifying a pact between ^[[1mShippingService^[[0m and ^[[1mOrdersProvider^[[0m
+Verify provider against v1 and v2 pacts	Verify provider against the async contract	2026-10-30T14:59:10.0596135Z 
+Verify provider against v1 and v2 pacts	Verify provider against the async contract	2026-10-30T14:59:10.0596381Z   an order shipped event (1s 795ms loading, 17ms verification)
+Verify provider against v1 and v2 pacts	Verify provider against the async contract	2026-10-30T14:59:10.0596896Z      Given order 1001 has been shipped
+Verify provider against v1 and v2 pacts	Verify provider against the async contract	2026-10-30T14:59:10.0597308Z     generates a message which
+Verify provider against v1 and v2 pacts	Verify provider against the async contract	2026-10-30T14:59:10.0597969Z       includes metadata
+Verify provider against v1 and v2 pacts	Verify provider against the async contract	2026-10-30T14:59:10.0598734Z         "^[[1mcontentType^[[0m" with value ^[[1m"application/json"^[[0m (^[[32mOK^[[0m)
+Verify provider against v1 and v2 pacts	Verify provider against the async contract	2026-10-30T14:59:10.0599282Z       has a matching body (^[[32mOK^[[0m)
+Verify provider against v1 and v2 pacts	Verify provider against the async contract	2026-10-30T14:59:10.0599463Z 
+Verify provider against v1 and v2 pacts	Verify provider against the async contract	2026-10-30T14:59:10.0599471Z 
+Verify provider against v1 and v2 pacts	Verify provider against the async contract	2026-10-30T14:59:10.0638598Z PASS test/order-shipped.broker.verify.test.js
+Verify provider against v1 and v2 pacts	Verify provider against the async contract	2026-10-30T14:59:10.0640464Z   Order Shipped event - provider verification against the Broker
+Verify provider against v1 and v2 pacts	Verify provider against the async contract	2026-10-30T14:59:10.0642495Z     ✓ publishes messages that conform to the contract on the Broker (2360 ms)
+Verify provider against v1 and v2 pacts	Verify provider against the async contract	2026-10-30T14:59:10.0642865Z 
+Verify provider against v1 and v2 pacts	Verify provider against the async contract	2026-10-30T14:59:10.0662704Z Test Suites: 1 passed, 1 total
+Verify provider against v1 and v2 pacts	Verify provider against the async contract	2026-10-30T14:59:10.0663372Z Tests:       1 passed, 1 total
+Verify provider against v1 and v2 pacts	Verify provider against the async contract	2026-10-30T14:59:10.0663887Z Snapshots:   0 total
+Verify provider against v1 and v2 pacts	Verify provider against the async contract	2026-10-30T14:59:10.0664378Z Time:        2.823 s
+Verify provider against v1 and v2 pacts	Verify provider against the async contract	2026-10-30T14:59:10.0665255Z Ran all test suites matching test/order-shipped.broker.verify.test.js.
+Verify provider against v1 and v2 pacts	Deploy gate (can-i-deploy)	﻿2026-10-30T14:59:10.1874085Z ##[group]Run npx pact broker can-i-deploy --pacticipant OrdersProvider --version "$GIT_COMMIT" --to-environment production --broker-base-url "$PACT_BROKER_BASE_URL" --retry-while-unknown 5 --retry-interval 2
+Verify provider against v1 and v2 pacts	Deploy gate (can-i-deploy)	2026-10-30T14:59:10.1875388Z ^[[36;1mnpx pact broker can-i-deploy --pacticipant OrdersProvider --version "$GIT_COMMIT" --to-environment production --broker-base-url "$PACT_BROKER_BASE_URL" --retry-while-unknown 5 --retry-interval 2^[[0m
+Verify provider against v1 and v2 pacts	Deploy gate (can-i-deploy)	2026-10-30T14:59:10.1888835Z shell: /usr/bin/bash -e {0}
+Verify provider against v1 and v2 pacts	Deploy gate (can-i-deploy)	2026-10-30T14:59:10.1889234Z env:
+Verify provider against v1 and v2 pacts	Deploy gate (can-i-deploy)	2026-10-30T14:59:10.1889774Z   PACT_BROKER_BASE_URL: ***
+Verify provider against v1 and v2 pacts	Deploy gate (can-i-deploy)	2026-10-30T14:59:10.1890118Z   PACT_BROKER_USERNAME: ***
+Verify provider against v1 and v2 pacts	Deploy gate (can-i-deploy)	2026-10-30T14:59:10.1890503Z   PACT_BROKER_PASSWORD: ***
+Verify provider against v1 and v2 pacts	Deploy gate (can-i-deploy)	2026-10-30T14:59:10.1890865Z   GIT_COMMIT: 770856b2f1fd63c34a93744597e61444e82444cc
+Verify provider against v1 and v2 pacts	Deploy gate (can-i-deploy)	2026-10-30T14:59:10.1891264Z ##[endgroup]
+Verify provider against v1 and v2 pacts	Deploy gate (can-i-deploy)	2026-10-30T14:59:11.0722619Z ┌─────────────────┬──────────────────────────────────────────┬────────────────┬──────────────────────────────────────────┬──────────┬────────┐
+Verify provider against v1 and v2 pacts	Deploy gate (can-i-deploy)	2026-10-30T14:59:11.0724981Z │ CONSUMER        ┆ C.VERSION                                ┆ PROVIDER       ┆ P.VERSION                                ┆ SUCCESS? ┆ RESULT │
+Verify provider against v1 and v2 pacts	Deploy gate (can-i-deploy)	2026-10-30T14:59:11.0727070Z ╞═════════════════╪══════════════════════════════════════════╪════════════════╪══════════════════════════════════════════╪══════════╪════════╡
+Verify provider against v1 and v2 pacts	Deploy gate (can-i-deploy)	2026-10-30T14:59:11.0728884Z │ OrdersConsumer  ┆ 2.0.0                                    ┆ OrdersProvider ┆ 770856b2f1fd63c34a93744597e61444e82444cc ┆ true     ┆ 1      │
+Verify provider against v1 and v2 pacts	Deploy gate (can-i-deploy)	2026-10-30T14:59:11.0730635Z ├╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┼╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┼╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┼╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┼╌╌╌╌╌╌╌╌╌╌┼╌╌╌╌╌╌╌╌┤
+Verify provider against v1 and v2 pacts	Deploy gate (can-i-deploy)	2026-10-30T14:59:11.0732869Z │ ShippingService ┆ 770856b2f1fd63c34a93744597e61444e82444cc ┆ OrdersProvider ┆ 770856b2f1fd63c34a93744597e61444e82444cc ┆ true     ┆ 1      │
+Verify provider against v1 and v2 pacts	Deploy gate (can-i-deploy)	2026-10-30T14:59:11.0735106Z └─────────────────┴──────────────────────────────────────────┴────────────────┴──────────────────────────────────────────┴──────────┴────────┘
+Verify provider against v1 and v2 pacts	Deploy gate (can-i-deploy)	2026-10-30T14:59:11.0736054Z 
+Verify provider against v1 and v2 pacts	Deploy gate (can-i-deploy)	2026-10-30T14:59:11.0736540Z VERIFICATION RESULTS
+Verify provider against v1 and v2 pacts	Deploy gate (can-i-deploy)	2026-10-30T14:59:11.0737055Z --------------------
+Verify provider against v1 and v2 pacts	Deploy gate (can-i-deploy)	2026-10-30T14:59:11.0739693Z 1. ***/pacts/provider/OrdersProvider/consumer/OrdersConsumer/pact-version/99d09d5ba00671e91341d350336b2e0c4589c3d2/metadata/Y3ZuPTIuMC4w/verification-results/216 (success)
+Verify provider against v1 and v2 pacts	Deploy gate (can-i-deploy)	2026-10-30T14:59:11.0742334Z 2. ***/pacts/provider/OrdersProvider/consumer/ShippingService/pact-version/0312f14a71cd02880413d0cc2cb05612969c8bb1/metadata/Y3ZuPTc3MDg1NmIyZjFmZDYzYzM0YTkzNzQ0NTk3ZTYxNDQ0ZTgyNDQ0Y2M/verification-results/218 (success)
+Verify provider against v1 and v2 pacts	Deploy gate (can-i-deploy)	2026-10-30T14:59:11.0744253Z 
+Verify provider against v1 and v2 pacts	Deploy gate (can-i-deploy)	2026-10-30T14:59:11.0744306Z 
+Verify provider against v1 and v2 pacts	Deploy gate (can-i-deploy)	2026-10-30T14:59:11.0745053Z All required verification results are published and successful
+Verify provider against v1 and v2 pacts	Deploy gate (can-i-deploy)	2026-10-30T14:59:11.0745645Z 
+Verify provider against v1 and v2 pacts	Deploy gate (can-i-deploy)	2026-10-30T14:59:11.0745657Z 
+Verify provider against v1 and v2 pacts	Deploy gate (can-i-deploy)	2026-10-30T14:59:11.0745990Z ✅ Computer says yes \o/
+Verify provider against v1 and v2 pacts	Post Setup Node.js	﻿2026-10-30T14:59:11.0949701Z Post job cleanup.
+Verify provider against v1 and v2 pacts	Post Setup Node.js	2026-10-30T14:59:11.2091894Z (node:2268) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+Verify provider against v1 and v2 pacts	Post Setup Node.js	2026-10-30T14:59:11.2093179Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Verify provider against v1 and v2 pacts	Post Setup Node.js	2026-10-30T14:59:11.2095038Z Cache hit occurred on the primary key node-cache-Linux-x64-npm-a30192a492ea4dee4e12d9bc8133a0fca7ae02f4aa88842128789fa6f90503fe, not saving cache.
+Verify provider against v1 and v2 pacts	Post Checkout	﻿2026-10-30T14:59:11.2242437Z Post job cleanup.
+Verify provider against v1 and v2 pacts	Post Checkout	2026-10-30T14:59:11.3007965Z [command]/usr/bin/git version
+Verify provider against v1 and v2 pacts	Post Checkout	2026-10-30T14:59:11.3050177Z git version 2.56.0
+Verify provider against v1 and v2 pacts	Post Checkout	2026-10-30T14:59:11.3087582Z Temporarily overriding HOME='/home/runner/work/_temp/b0e2c4cb-8d70-4b0b-aa1d-435ccc48c303' before making global git config changes
+Verify provider against v1 and v2 pacts	Post Checkout	2026-10-30T14:59:11.3088961Z Adding repository directory to the temporary git global config as a safe directory
+Verify provider against v1 and v2 pacts	Post Checkout	2026-10-30T14:59:11.3093454Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/coursera-pact-module-3/coursera-pact-module-3
+Verify provider against v1 and v2 pacts	Post Checkout	2026-10-30T14:59:11.3128098Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Verify provider against v1 and v2 pacts	Post Checkout	2026-10-30T14:59:11.3159230Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Verify provider against v1 and v2 pacts	Post Checkout	2026-10-30T14:59:11.3352475Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Verify provider against v1 and v2 pacts	Post Checkout	2026-10-30T14:59:11.3375069Z http.https://github.com/.extraheader
+Verify provider against v1 and v2 pacts	Post Checkout	2026-10-30T14:59:11.3385517Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+Verify provider against v1 and v2 pacts	Post Checkout	2026-10-30T14:59:11.3435965Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Verify provider against v1 and v2 pacts	Post Checkout	2026-10-30T14:59:11.3643761Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Verify provider against v1 and v2 pacts	Post Checkout	2026-10-30T14:59:11.3681768Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Verify provider against v1 and v2 pacts	Complete job	﻿2026-10-30T14:59:11.4076527Z Cleaning up orphan processes
+Verify provider against v1 and v2 pacts	Complete job	2026-10-30T14:59:11.4409474Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
