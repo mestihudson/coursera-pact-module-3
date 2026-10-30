@@ -1,0 +1,211 @@
+
+> pact-provider-orders@1.0.0 test
+> npm run test:api && npm run test:api:broker && npm run test:async && npm run test:async:broker && npm run test:breaking
+
+
+> pact-provider-orders@1.0.0 test:api
+> jest --runInBand test/orders.verify.test.js
+
+  console.log
+    [11:36:38.839] WARN (28095): pact@17.1.4: no state handler found for state: "order 1001 exists"
+
+      at Object.write (node_modules/@pact-foundation/pact-core/src/logger/pino.ts:17:17)
+
+(node:28095) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  console.log
+    [11:36:38.940] WARN (28095): pact@17.1.4: no state handler found for state: "order 1001 exists"
+
+      at Object.write (node_modules/@pact-foundation/pact-core/src/logger/pino.ts:17:17)
+
+2026-10-30T14:36:38.963449Z  WARN ThreadId(09) pact_matching::metrics: 
+
+Please note:
+We are tracking events anonymously to gather important usage statistics like Pact version and operating system. To disable tracking, set the 'PACT_DO_NOT_TRACK' environment variable to 'true'.
+
+
+
+Verifying a pact between [1mOrdersConsumer[0m and [1mOrdersProvider[0m
+
+  a request for order 1001 (0s loading, 143ms verification)
+     Given order 1001 exists
+    returns a response which
+      has status code [1m200[0m ([32mOK[0m)
+      includes headers
+        "[1mContent-Type[0m" with value "[1mapplication/json[0m" ([32mOK[0m)
+      has a matching body ([32mOK[0m)
+
+
+Verifying a pact between [1mOrdersConsumer[0m and [1mOrdersProvider[0m
+
+  a request for order 1001 on API v2 (0s loading, 37ms verification)
+     Given order 1001 exists
+    returns a response which
+      has status code [1m200[0m ([32mOK[0m)
+      includes headers
+        "[1mContent-Type[0m" with value "[1mapplication/json[0m" ([32mOK[0m)
+      has a matching body ([32mOK[0m)
+
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        1.873 s, estimated 3 s
+Ran all test suites matching test/orders.verify.test.js.
+
+> pact-provider-orders@1.0.0 test:api:broker
+> jest --runInBand test/orders.broker.verify.test.js
+
+  console.log
+    [11:36:41.695] WARN (28129): pact@17.1.4: no state handler found for state: "order 1001 exists"
+
+      at Object.write (node_modules/@pact-foundation/pact-core/src/logger/pino.ts:17:17)
+
+(node:28129) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  console.log
+    [11:36:41.817] WARN (28129): pact@17.1.4: no state handler found for state: "order 1001 exists"
+
+      at Object.write (node_modules/@pact-foundation/pact-core/src/logger/pino.ts:17:17)
+
+2026-10-30T14:36:41.863094Z  WARN ThreadId(10) pact_matching::metrics: 
+
+Please note:
+We are tracking events anonymously to gather important usage statistics like Pact version and operating system. To disable tracking, set the 'PACT_DO_NOT_TRACK' environment variable to 'true'.
+
+
+The pact at http://localhost:9293/pacts/provider/OrdersProvider/consumer/OrdersConsumer/pact-version/5d76705016f74f1b44ddf5f2ee8d39334d01366a is being verified because the pact content belongs to the consumer version matching the following criterion:
+    * all consumer versions tagged 'v1' (1.0.0)
+
+Verifying a pact between [1mOrdersConsumer[0m and [1mOrdersProvider[0m
+
+  a request for order 1001 (160ms loading, 161ms verification)
+     Given order 1001 exists
+    returns a response which
+      has status code [1m200[0m ([32mOK[0m)
+      includes headers
+        "[1mContent-Type[0m" with value "[1mapplication/json[0m" ([32mOK[0m)
+      has a matching body ([32mOK[0m)
+
+The pact at http://localhost:9293/pacts/provider/OrdersProvider/consumer/OrdersConsumer/pact-version/99d09d5ba00671e91341d350336b2e0c4589c3d2 is being verified because the pact content belongs to the consumer version matching the following criterion:
+    * all consumer versions tagged 'v2' (2.0.0)
+
+Verifying a pact between [1mOrdersConsumer[0m and [1mOrdersProvider[0m
+
+  a request for order 1001 on API v2 (160ms loading, 62ms verification)
+     Given order 1001 exists
+    returns a response which
+      has status code [1m200[0m ([32mOK[0m)
+      includes headers
+        "[1mContent-Type[0m" with value "[1mapplication/json[0m" ([32mOK[0m)
+      has a matching body ([32mOK[0m)
+
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        2.281 s
+Ran all test suites matching test/orders.broker.verify.test.js.
+
+> pact-provider-orders@1.0.0 test:async
+> jest --runInBand test/order-shipped.verify.test.js
+
+2026-10-30T14:36:44.597023Z  WARN ThreadId(09) pact_verifier::callback_executors: State Change ignored as there is no state change URL provided for interaction 
+2026-10-30T14:36:44.636499Z  WARN ThreadId(09) pact_matching::metrics: 
+
+Please note:
+We are tracking events anonymously to gather important usage statistics like Pact version and operating system. To disable tracking, set the 'PACT_DO_NOT_TRACK' environment variable to 'true'.
+
+
+
+Verifying a pact between [1mShippingService[0m and [1mOrdersProvider[0m
+
+  an order shipped event (0s loading, 52ms verification)
+     Given order 1001 has been shipped
+    generates a message which
+      includes metadata
+        "[1mcontentType[0m" with value [1m"application/json"[0m ([32mOK[0m)
+      has a matching body ([32mOK[0m)
+
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        1.698 s, estimated 3 s
+Ran all test suites matching test/order-shipped.verify.test.js.
+
+> pact-provider-orders@1.0.0 test:async:broker
+> jest --runInBand test/order-shipped.broker.verify.test.js
+
+2026-10-30T14:36:47.304397Z  WARN ThreadId(10) pact_verifier::callback_executors: State Change ignored as there is no state change URL provided for interaction 9c299d9f739bf72e9e79de8d962f13d2cfdbd335
+2026-10-30T14:36:47.343942Z  WARN ThreadId(10) pact_matching::metrics: 
+
+Please note:
+We are tracking events anonymously to gather important usage statistics like Pact version and operating system. To disable tracking, set the 'PACT_DO_NOT_TRACK' environment variable to 'true'.
+
+
+The pact at http://localhost:9293/pacts/provider/OrdersProvider/consumer/ShippingService/pact-version/0312f14a71cd02880413d0cc2cb05612969c8bb1 is being verified because the pact content belongs to the consumer version matching the following criterion:
+    * all consumer versions tagged 'async' (1.0.0)
+
+Verifying a pact between [1mShippingService[0m and [1mOrdersProvider[0m
+
+  an order shipped event (150ms loading, 52ms verification)
+     Given order 1001 has been shipped
+    generates a message which
+      includes metadata
+        "[1mcontentType[0m" with value [1m"application/json"[0m ([32mOK[0m)
+      has a matching body ([32mOK[0m)
+
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        1.921 s, estimated 2 s
+Ran all test suites matching test/order-shipped.broker.verify.test.js.
+
+> pact-provider-orders@1.0.0 test:breaking
+> jest --runInBand test/orders.breaking.test.js
+
+(node:28232) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+
+Verifying a pact between [1mOrdersConsumer[0m and [1mOrdersProvider[0m
+
+  a request for order 1001 (1ms loading, 104ms verification)
+     Given order 1001 exists
+    returns a response which
+      has status code [1m200[0m ([32mOK[0m)
+      includes headers
+        "[1mContent-Type[0m" with value "[1mapplication/json[0m" ([32mOK[0m)
+      has a matching body ([31mFAILED[0m)
+
+
+Failures:
+
+1) Verifying a pact between OrdersConsumer and OrdersProvider Given order 1001 exists - a request for order 1001
+    1.1) has a matching body
+           [1m$[0m -> Actual map is missing the following keys: currency
+           [1m$.total[0m -> Expected '199.9' (String) to be a decimal number
+    {
+  "createdAt": "2026-10-30T12:00:00Z",
+[31m    -  "currency": "BRL",
+[0m      "customerId": "CUST-77",
+  "orderId": "1001",
+  "status": "CONFIRMED",
+[31m    -  "total": 199.9
+[0m[32m    +  "total": "199.9"
+[0m    }
+
+
+There were 1 pact failures
+
+  console.log
+    [11:36:50.372] ERROR (28232): pact-core@20.2.0: Verification unsuccessful
+
+      at Object.write (node_modules/@pact-foundation/pact-core/src/logger/pino.ts:17:17)
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        1.807 s, estimated 3 s
+Ran all test suites matching test/orders.breaking.test.js.

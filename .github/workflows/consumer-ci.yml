@@ -1,0 +1,65 @@
+name: Consumer CI - Contract Tests and Publish
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "consumer/**"
+      - ".github/workflows/consumer-ci.yml"
+  pull_request:
+    paths:
+      - "consumer/**"
+  workflow_dispatch:
+
+jobs:
+  contract:
+    name: Test consumer and publish pacts
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: consumer
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: consumer/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run consumer contract tests
+        run: npm test
+
+      - name: Publish pact v1 to broker
+        if: github.event_name != 'pull_request'
+        env:
+          PACT_BROKER_BASE_URL: ${{ secrets.PACT_BROKER_BASE_URL }}
+          PACT_BROKER_USERNAME: ${{ secrets.PACT_BROKER_USERNAME }}
+          PACT_BROKER_PASSWORD: ${{ secrets.PACT_BROKER_PASSWORD }}
+          GIT_BRANCH: ${{ github.ref_name }}
+        run: npm run publish:pact:v1
+
+      - name: Publish pact v2 to broker
+        if: github.event_name != 'pull_request'
+        env:
+          PACT_BROKER_BASE_URL: ${{ secrets.PACT_BROKER_BASE_URL }}
+          PACT_BROKER_USERNAME: ${{ secrets.PACT_BROKER_USERNAME }}
+          PACT_BROKER_PASSWORD: ${{ secrets.PACT_BROKER_PASSWORD }}
+          GIT_BRANCH: ${{ github.ref_name }}
+        run: npm run publish:pact:v2
+
+      - name: Publish async pact to broker
+        if: github.event_name != 'pull_request'
+        env:
+          PACT_BROKER_BASE_URL: ${{ secrets.PACT_BROKER_BASE_URL }}
+          PACT_BROKER_USERNAME: ${{ secrets.PACT_BROKER_USERNAME }}
+          PACT_BROKER_PASSWORD: ${{ secrets.PACT_BROKER_PASSWORD }}
+          GIT_COMMIT: ${{ github.sha }}
+          GIT_BRANCH: ${{ github.ref_name }}
+        run: npm run publish:pact:async

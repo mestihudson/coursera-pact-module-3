@@ -1,0 +1,23 @@
+{
+  "name": "pact-provider-orders",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Orders provider that verifies the v1/v2 API contracts and publishes the Order Shipped event",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "npm run test:api && npm run test:api:broker && npm run test:async && npm run test:async:broker && npm run test:breaking",
+    "test:api": "jest --runInBand test/orders.verify.test.js",
+    "test:api:broker": "jest --runInBand test/orders.broker.verify.test.js",
+    "test:async": "jest --runInBand test/order-shipped.verify.test.js",
+    "test:async:broker": "jest --runInBand test/order-shipped.broker.verify.test.js",
+    "test:breaking": "jest --runInBand test/orders.breaking.test.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@pact-foundation/pact": "^17.1.4",
+    "@pact-foundation/pact-cli": "^18.10.9",
+    "jest": "^30.5.2"
+  }
+}

@@ -1,0 +1,71 @@
+name: Provider CI - Verify Pact Versions and Deploy Gate
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "provider/**"
+      - ".github/workflows/provider-ci.yml"
+  pull_request:
+    paths:
+      - "provider/**"
+  workflow_dispatch:
+  repository_dispatch:
+    types: [pact-changed]
+
+jobs:
+  verify:
+    name: Verify provider against v1 and v2 pacts
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: provider
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: provider/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Verify provider against the v1 and v2 contracts
+        env:
+          CI: "true"
+          PACT_BROKER_BASE_URL: ${{ secrets.PACT_BROKER_BASE_URL }}
+          PACT_BROKER_USERNAME: ${{ secrets.PACT_BROKER_USERNAME }}
+          PACT_BROKER_PASSWORD: ${{ secrets.PACT_BROKER_PASSWORD }}
+          GIT_COMMIT: ${{ github.sha }}
+          GIT_BRANCH: ${{ github.ref_name }}
+        run: npx jest --runInBand test/orders.broker.verify.test.js
+
+      - name: Verify provider against the async contract
+        env:
+          CI: "true"
+          PACT_BROKER_BASE_URL: ${{ secrets.PACT_BROKER_BASE_URL }}
+          PACT_BROKER_USERNAME: ${{ secrets.PACT_BROKER_USERNAME }}
+          PACT_BROKER_PASSWORD: ${{ secrets.PACT_BROKER_PASSWORD }}
+          GIT_COMMIT: ${{ github.sha }}
+        run: npx jest --runInBand test/order-shipped.verify.test.js
+
+      - name: Deploy gate (can-i-deploy)
+        if: github.event_name != 'pull_request'
+        env:
+          PACT_BROKER_BASE_URL: ${{ secrets.PACT_BROKER_BASE_URL }}
+          PACT_BROKER_USERNAME: ${{ secrets.PACT_BROKER_USERNAME }}
+          PACT_BROKER_PASSWORD: ${{ secrets.PACT_BROKER_PASSWORD }}
+          GIT_COMMIT: ${{ github.sha }}
+        run: >
+          npx pact broker can-i-deploy
+          --pacticipant OrdersProvider
+          --version "$GIT_COMMIT"
+          --to-environment production
+          --broker-base-url "$PACT_BROKER_BASE_URL"
+          --retry-while-unknown 5
+          --retry-interval 2

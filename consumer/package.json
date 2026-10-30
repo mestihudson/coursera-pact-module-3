@@ -1,0 +1,22 @@
+{
+  "name": "pact-consumer-orders",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Checkout service that consumes the Orders API (v1 and v2 contracts) and the Order Shipped event",
+  "main": "src/ordersClient.js",
+  "scripts": {
+    "test": "jest --runInBand",
+    "publish:pact:v1": "pact broker publish ./pacts/v1 --consumer-app-version=${PACT_VERSION_V1:-1.0.0} --tag=v1 --branch=${GIT_BRANCH:-main} --broker-base-url=${PACT_BROKER_BASE_URL:-http://localhost:9293}",
+    "publish:pact:v2": "pact broker publish ./pacts/v2 --consumer-app-version=${PACT_VERSION_V2:-2.0.0} --tag=v2 --branch=${GIT_BRANCH:-main} --broker-base-url=${PACT_BROKER_BASE_URL:-http://localhost:9293}",
+    "publish:pact:async": "pact broker publish ./pacts/ShippingService-OrdersProvider.json --consumer-app-version=${GIT_COMMIT:-1.0.0} --tag=async --branch=${GIT_BRANCH:-main} --broker-base-url=${PACT_BROKER_BASE_URL:-http://localhost:9293}",
+    "publish:pact": "npm run publish:pact:v1 && npm run publish:pact:v2 && npm run publish:pact:async"
+  },
+  "dependencies": {
+    "axios": "^1.7.9"
+  },
+  "devDependencies": {
+    "@pact-foundation/pact": "^17.1.4",
+    "@pact-foundation/pact-cli": "^18.10.9",
+    "jest": "^30.5.2"
+  }
+}

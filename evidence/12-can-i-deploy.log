@@ -1,0 +1,19 @@
+=== can-i-deploy (deploy gate) ===
+┌─────────────────┬───────────┬────────────────┬───────────┬──────────┬────────┐
+│ CONSUMER        ┆ C.VERSION ┆ PROVIDER       ┆ P.VERSION ┆ SUCCESS? ┆ RESULT │
+╞═════════════════╪═══════════╪════════════════╪═══════════╪══════════╪════════╡
+│ OrdersConsumer  ┆ 2.0.0     ┆ OrdersProvider ┆ 1.0.0     ┆ true     ┆ 1      │
+├╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┼╌╌╌╌╌╌╌╌╌╌╌┼╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┼╌╌╌╌╌╌╌╌╌╌╌┼╌╌╌╌╌╌╌╌╌╌┼╌╌╌╌╌╌╌╌┤
+│ ShippingService ┆ 1.0.0     ┆ OrdersProvider ┆ 1.0.0     ┆ true     ┆ 1      │
+└─────────────────┴───────────┴────────────────┴───────────┴──────────┴────────┘
+
+VERIFICATION RESULTS
+--------------------
+1. http://localhost:9293/pacts/provider/OrdersProvider/consumer/OrdersConsumer/pact-version/99d09d5ba00671e91341d350336b2e0c4589c3d2/metadata/Y3ZuPTIuMC4w/verification-results/206 (success)
+2. http://localhost:9293/pacts/provider/OrdersProvider/consumer/ShippingService/pact-version/0312f14a71cd02880413d0cc2cb05612969c8bb1/metadata/Y3ZuPTEuMC4w/verification-results/202 (success)
+
+
+All required verification results are published and successful
+
+
+✅ Computer says yes \o/
