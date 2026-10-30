@@ -51,6 +51,15 @@ npx pact broker can-i-deploy \
   --broker-base-url http://localhost:9293
 ```
 
+**Regerar os prints do Broker** (`evidence/*.png`):
+
+```bash
+npm i -D playwright
+npx playwright install chromium
+docker compose up -d
+PACT_BROKER_BASE_URL=http://localhost:9293 node evidence/capture-screenshots.js
+```
+
 ## Contratos gerados
 
 | Contrato | Consumer | Provider | Tag | Conteúdo |
